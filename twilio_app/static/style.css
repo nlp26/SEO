@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Header */
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 40px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Card Design */
+.card {
+    background-color: #fff;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Spacing inside the card */
+    margin-bottom: 20px; /* Space between cards */
+}
+
+/* Form Styling */
+.action-form .form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+.action-form label {
+    display: block; /* Labels above inputs */
+    font-weight: bold;
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+.action-form input,
+.action-form select {
+    width: calc(100% - 20px); /* Ensure inputs stay within card padding */
+    padding: 10px; /* Padding inside input fields */
+    border-radius: 6px; /* Rounded corners for inputs */
+    border: 1px solid #ddd; /* Light border for inputs */
+}
+
+.action-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; /* Blue background for primary button */
+    color: white;
+    font-size: 16px;
+    border-radius: 6px; /* Rounded corners for button */
+    border: none;
+    cursor: pointer;
+}
+
+.action-form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Result Cards (Success/Error) */
+.result-card {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners for result cards */
+}
+
+.result-card.success {
+    background-color: #d4edda; /* Light green for success messages */
+    color: #155724; /* Dark green text for success messages */
+}
+
+.result-card.error {
+    background-color: #f8d7da; /* Light red for error messages */
+    color: #721c24; /* Dark red text for error messages */
+}
+
+/* Buttons (Edit/Delete) */
+.action-buttons {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+}
+
+.action-buttons button {
+    width: calc(50% - 10px); /* Equal-sized buttons with spacing in between */
+}

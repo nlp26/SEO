@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local CEO Twilio Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<header class="app-header">
+        <img src="{{ url_for('static', filename='logo.jpg') }}" alt="Local CEO Logo" class="logo">
+        <h1>Local CEO Twilio Manager</h1>
+</header>
+
+<!-- Input Form -->
+<div class="card">
+        <form method="POST" class="action-form">
+            <div class="form-group">
+                <label for="account_sid">Account SID:</label>
+                <input type="text" id="account_sid" name="account_sid" placeholder="Your Account SID" required>
+            </div>
+            <div class="form-group">
+                <label for="auth_token">Auth Token:</label>
+                <input type="text" id="auth_token" name="auth_token" placeholder="Your Auth Token" required>
+            </div>
+
+            <!-- Action Selector -->
+            <div class="form-group">
+                <label for="action">Choose an Action:</label>
+                <select id="action" name="action" required onchange="toggleActionFields()">
+                    <option value="">-- Select an Action --</option>
+                    <option value="spam_check">Check Spam Status</option>
+                    <option value="close_subaccount">Close Subaccount</option>
+                </select>
+            </div>
+
+            <!-- Spam Check Fields -->
+            <div id="spam-check-fields" class="conditional-fields hidden">
+                <label for="phone_number">Phone Number:</label>
+                <input type="text" id="phone_number" name="phone_number" placeholder="+1XXXXXXXXXX">
+            </div>
+
+            <!-- Close Subaccount Fields -->
+            <div id="close-subaccount-fields" class="conditional-fields hidden">
+                <label for="subaccount_sid">Subaccount SID:</label>
+                <input type="text" id="subaccount_sid" name="subaccount_sid" placeholder="Subaccount SID">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+</div>
+
+<!-- Results Section -->
+{% if result %}
+        <div class="result-card success">
+            {{ result }}
+        </div>
+{% elif error_message %}
+        <div class="result-card error">
+            {{ error_message }}
+        </div>
+{% endif %}
+
+</div>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
