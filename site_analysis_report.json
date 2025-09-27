@@ -1,0 +1,50 @@
+{
+    "url": "https://www.localceo.us",
+    "speed_data": {
+        "performance": 0.9,
+        "metrics": {
+            "LCP": "1.0\u00a0s",
+            "FID": "1.0\u00a0s",
+            "CLS": "0.161"
+        }
+    },
+    "keywords": [
+        "marketing strategies",
+        "marketing tools",
+        "marketing tips",
+        "marketing online",
+        "marketing for small business",
+        "marketing agency",
+        "marketing 2024 trends"
+    ],
+    "search_volume": {
+        "marketing strategies": {
+            "monthly_searches": 1200,
+            "competition": "low"
+        },
+        "marketing tools": {
+            "monthly_searches": 1150,
+            "competition": "high"
+        },
+        "marketing tips": {
+            "monthly_searches": 1140,
+            "competition": "low"
+        },
+        "marketing online": {
+            "monthly_searches": 1160,
+            "competition": "low"
+        },
+        "marketing for small business": {
+            "monthly_searches": 1280,
+            "competition": "low"
+        },
+        "marketing agency": {
+            "monthly_searches": 1160,
+            "competition": "low"
+        },
+        "marketing 2024 trends": {
+            "monthly_searches": 1210,
+            "competition": "high"
+        }
+    }
+}
