@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Analyzer Pro | Local CEO</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="/static/images/logo.webp" alt="Local CEO">
+                <h1>SEO Analyzer Pro</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="input-area">
+                <div class="url-input-group">
+                    <input type="text" id="urlInput" placeholder="Enter URL to analyze (e.g., https://localceo.us)">
+                    <button id="analyzeBtn" onclick="analyzeWebsite()">Analyze</button>
+                </div>
+            </div>
+            
+            <div id="loading" style="display:none;">
+                <div class="spinner"></div>
+                <p>Analyzing your website. This may take a moment...</p>
+            </div>
+            
+            <div id="results" style="display:none;">
+                <div class="tabs-container">
+                    <div class="tabs">
+                        <div class="tab active" data-tab="performance">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Performance</span>
+                        </div>
+                        <div class="tab" data-tab="technical">
+                            <i class="fas fa-code"></i>
+                            <span>Technical Audit</span>
+                        </div>
+                        <div class="tab" data-tab="content">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Content Analysis</span>
+                        </div>
+                        <div class="tab" data-tab="insights">
+                            <i class="fas fa-brain"></i>
+                            <span>AI Insights</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Performance Tab -->
+                    <div class="tab-content active" id="performance-content">
+                        <div class="results-grid">
+                            <div class="result-card">
+                                <h3>Lighthouse Scores</h3>
+                                <div class="score-cards" id="lighthouse-scores">
+                                    <!-- Will be filled by JavaScript -->
+                                </div>
+                            </div>
+                            
+                            <div class="result-card">
+                                <h3>Core Web Vitals</h3>
+                                <table class="vitals-table" id="core-vitals">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Metric</th>
+                                            <th>Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Will be filled by JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="result-card">
+                            <h3>Optimization Opportunities</h3>
+                            <div class="opportunities-grid" id="optimization-opportunities">
+                                <!-- Will be filled by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Technical Audit Tab -->
+                    <div class="tab-content" id="technical-content">
+                        <div class="results-grid">
+                            <div class="result-card">
+                                <h3>Meta Information</h3>
+                                <div id="meta-info">
+                                    <!-- Will be filled by JavaScript -->
+                                </div>
+                            </div>
+                            
+                            <div class="result-card">
+                                <h3>Heading Structure</h3>
+                                <div class="heading-chart" id="heading-structure">
+                                    <!-- Will be filled by JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="result-card">
+                            <h3>Link Analysis</h3>
+                            <div class="link-stats" id="link-analysis">
+                                <!-- Will be filled by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Content Analysis Tab -->
+                    <div class="tab-content" id="content-content">
+                        <div class="result-card">
+                            <h3>Keyword Analysis</h3>
+                            <div id="keyword-metrics">
+                                <!-- Will be filled by JavaScript -->
+                            </div>
+                        </div>
+                        <div class="result-card">
+                            <h3>Image Analysis</h3>
+                            <div id="image-analysis">
+                                <!-- Will be filled by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- AI Insights Tab -->
+                    <div class="tab-content" id="insights-content">
+                        <div class="result-card">
+                            <h3>AI Recommendations</h3>
+                            <div id="ai-recommendations">
+                                <!-- Will be filled by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
